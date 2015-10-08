@@ -1,24 +1,37 @@
 module top
-    (input logic clk, btnc,
-    output logic[3:0] JA);
+    (input logic clk, btnC,
+    output logic JA[3:0]);
     
-    logic SCK, WS, SD, rst_l;
-    logic [14:0] addr;
+    logic MCK, SCK, WS, SD, rst_l;
+    logic [4:0] sck_out;
+    logic [2:0] ws_out;
+    logic [17:0] addr;
+    logic [15:0] data_r, data_l;
     
     
-    assign rst_l = btnc;
-    assign JA[0] = clk;
+    assign rst_l = ~btnC;
+    assign JA[0] = MCK;
     assign JA[1] = WS;
-    assign JA[2] = 0;
+    assign JA[2] = SCK;
     assign JA[3] = SD;
     assign data_l = data_r;
     
-    I2S_interface myInterface(.WS(WS), .SCK(clk), .rst_l(rst_l), .SD(SD),
+    I2S_interface myInterface(.WS(WS), .SCK(SCK), .rst_l(rst_l), .SD(SD),
                               .left_data(data_l), .right_data(data_r));
     
     blk_mem_gen_0 bm(.clka(SCK), .addra(addr), .douta(data_r));
+
+    counter #(18) cnt(.clk(WS), .count(addr), .rst_l(rst_l));
     
-    counter #(15) cnt(.clk(SCK), .count(addr), .rst_l(rst_l));
+    clk_wiz_0 clkgen(.clk_in(clk), .clk_out(MCK), .resetn(rst_l));
+    
+    counter #(5) cnt2(.clk(MCK), .count(sck_out), .rst_l(rst_l));
+    
+    counter #(3) cnt3(.clk(SCK), .count(ws_out), .rst_l(rst_l));
+    
+    assign WS = ws_out[2];
+    
+    assign SCK = sck_out[4];
     
 endmodule: top 
 //testing d flip flop

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Oct  8 17:52:19 2015
+# Process ID: 1955009
+# Log file: /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/vivado.log
+# Journal file: /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse {/afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/project_1.srcs/sources_1/imports/sound_mp/LS245.sv /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/project_1.srcs/sources_1/imports/sound_mp/LS255.sv}
+update_compile_order -fileset sim_1
+remove_files /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/project_1.srcs/sources_1/imports/sound_mp/LS255.sv
+remove_files -fileset sim_1 /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/project_1.srcs/sources_1/imports/sound_mp/LS245.sv
+add_files -norecurse /afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Rohan_chip_sim/project_1/project_1.srcs/sources_1/imports/sound_mp/LS255.sv
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench_LS244.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top LS255 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench_LS244.tcl
+close_sim

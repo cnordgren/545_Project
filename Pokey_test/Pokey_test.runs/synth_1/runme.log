@@ -1,0 +1,61 @@
+
+*** Running vivado
+    with args -log pokeyaudio.vds -m64 -mode batch -messageDb vivado.pb -notrace -source pokeyaudio.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source pokeyaudio.tcl -notrace
+Command: synth_design -top pokeyaudio -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1063.773 ; gain = 154.520 ; free physical = 12016 ; free virtual = 22174
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'pokeyaudio' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:1]
+INFO: [Synth 8-638] synthesizing module 'poly4bit' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:254]
+INFO: [Synth 8-638] synthesizing module 'FDCPE' [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:2851]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_PRE_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDCPE' (1#1) [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:2851]
+INFO: [Synth 8-256] done synthesizing module 'poly4bit' (2#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:254]
+INFO: [Synth 8-638] synthesizing module 'poly5bit' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:269]
+INFO: [Synth 8-256] done synthesizing module 'poly5bit' (3#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:269]
+INFO: [Synth 8-638] synthesizing module 'poly17or9bit' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:285]
+INFO: [Synth 8-256] done synthesizing module 'poly17or9bit' (4#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:285]
+INFO: [Synth 8-638] synthesizing module 'divideByN' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:146]
+INFO: [Synth 8-638] synthesizing module 'FDCE' [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:2800]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CLR_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDCE' (5#1) [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:2800]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (6#1) [/afs/ece/support/xilinx/xilinx.release/Vivado/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'divideByN' (7#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:146]
+INFO: [Synth 8-638] synthesizing module 'highpass' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:237]
+INFO: [Synth 8-256] done synthesizing module 'highpass' (8#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:237]
+INFO: [Synth 8-638] synthesizing module 'divideByN16bit' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:192]
+INFO: [Synth 8-256] done synthesizing module 'divideByN16bit' (9#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:192]
+INFO: [Synth 8-638] synthesizing module 'distortChn' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:96]
+INFO: [Synth 8-638] synthesizing module 'distortion' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:137]
+INFO: [Synth 8-256] done synthesizing module 'distortion' (10#1) [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:137]
+ERROR: [Synth 8-439] module 'clockHalf' not found [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:107]
+ERROR: [Synth 8-285] failed synthesizing module 'distortChn' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:96]
+ERROR: [Synth 8-285] failed synthesizing module 'pokeyaudio' [/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_tb/Pokey_tb.srcs/sources_1/imports/Audio/pokeyaudio.v:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.055 ; gain = 190.801 ; free physical = 11976 ; free virtual = 22137
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 18:25:05 2015...

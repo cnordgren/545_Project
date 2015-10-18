@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Oct  8 17:35:49 2015
+# Process ID: 1953536
+# Log file: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/vivado.log
+# Journal file: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  8 17:38:32 2015...

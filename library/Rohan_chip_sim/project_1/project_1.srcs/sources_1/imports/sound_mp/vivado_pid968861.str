@@ -1,0 +1,978 @@
+/*
+
+Vivado v2015.2 (64-bit)
+SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+Process ID: 968861
+
+Current time: 	9/30/15 10:49:22 PM EDT
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Red Hat Enterprise Linux Server release 7.1 (Maipo)
+Version: 3.10.0-229.11.1.el7.x86_64
+Architecture: amd64
+Available processors (cores): 12
+
+DISPLAY: localhost:12.0
+Screen size: 1680x1027
+Screen resolution (DPI): 95
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/tps/lnx64/jre
+
+User name: 	rsaigal
+User directory: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: /afs/ece.cmu.edu/usr/rsaigal/.Xilinx/Vivado/2015.2/vivado.ini
+Vivado layouts directory: /afs/ece.cmu.edu/usr/rsaigal/.Xilinx/Vivado/2015.2/layouts/application
+
+GUI allocated memory:	142 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,846 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 46 MB (+45533kb) [00:00:09]
+// [Engine Memory]: 4,846 MB (+4929907kb) [00:00:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,856 MB. GUI used memory: 22 MB. Current time: 9/30/15 10:49:24 PM EDT
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // l:JideButton (JPanel:JComponent, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// [GUI Memory]: 48 MB (+31kb) [00:03:05]
+// Elapsed time: 175 seconds
+setFileChooser("/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv");
+// 'i' command handler elapsed time: 178 seconds
+selectButton("PAResourceOtoP.OpenProject_UNABLE_TO_OPEN_FILE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,893 MB. GUI used memory: 23 MB. Current time: 9/30/15 10:52:24 PM EDT
+selectList(PAResourceEtoH.GettingStartedView_RECENT_PROJECTS, "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.xpr", 0); // t:v (JViewport:JComponent, cl:JFrame)
+// Opening Vivado Project: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.xpr. Version: Vivado v2015.2 
+// cp:P (cl:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.xpr 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 52 MB (+1810kb) [00:03:22]
+// [GUI Memory]: 59 MB (+4348kb) [00:03:35]
+// [GUI Memory]: 66 MB (+3745kb) [00:03:52]
+// [GUI Memory]: 69 MB (+584kb) [00:03:58]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: open_project /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece/support/xilinx/xilinx.release/Vivado/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,960 MB. GUI used memory: 27 MB. Current time: 9/30/15 10:53:09 PM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: project_1; location: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1; part: xc7a100ticsg324-1L
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:39 . Memory (MB): peak = 5891.512 ; gain = 69.656 ; free physical = 8231 ; free virtual = 26965 
+// Elapsed time: 41 seconds
+dismissDialog("Open Project"); // cp:P (cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // X:JMenu (JPopupMenu:JComponent, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_FILE, "Open File..."); // ab:JMenuItem (JPopupMenu:JComponent, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_FILE
+// Elapsed time: 24 seconds
+setFileChooser("/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv");
+// 'e' command handler elapsed time: 24 seconds
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 76 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // i:l (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, LS244 (LS244.sv)]", 8, true); // A:k (H:JPanel, cl:JFrame) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 4,972 MB. GUI used memory: 29 MB. Current time: 9/30/15 10:56:09 PM EDT
+selectButton(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "run_synthesis"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// 'm' command handler elapsed time: 9 seconds
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_Cancel", "Cancel"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_tristate_buffer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message:      while executing "webtalk_transmit -clientid 500665072 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/proj..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_tristate_buffer_behav/webtalk/xsim_webtalk.t..." line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 22:56:31 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_tristate_buffer_behav -key {Behavioral:sim_1:Functional:testbench_tristate_buffer} -tclbatch {testbench_tristate_buffer.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,008 MB. GUI used memory: 33 MB. Current time: 9/30/15 10:56:46 PM EDT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: source testbench_tristate_buffer.tcl 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: x=0, en=1, y=0 xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:20 . Memory (MB): peak = 5960.656 ; gain = 48.648 ; free physical = 8202 ; free virtual = 26936 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_tristate_buffer_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 5960.656 ; gain = 57.863 ; free physical = 8202 ; free virtual = 26936 
+// 'c' command handler elapsed time: 26 seconds
+// Elapsed time: 26 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// [GUI Memory]: 73 MB (+195kb) [00:07:52]
+// Elapsed time: 36 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "tb0 ; tristate_buffer ; Verilog Module", 1, "tb0", 0, false); // d:av (JViewport:JComponent, cl:JFrame)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// Elapsed time: 15 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "testbench_tristate_buffer ; testbench_tristate_buffer ; Verilog Module", 0, "testbench_tristate_buffer", 0, true); // d:av (JViewport:JComponent, cl:JFrame) - Node
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "testbench_tristate_buffer ; testbench_tristate_buffer ; Verilog Module", 0, "testbench_tristate_buffer", 0, true, false, false, false, false, true); // d:av (JViewport:JComponent, cl:JFrame) - Double Click - Node
+// TclEventType: SIMULATION_OPEN_SOURCE
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 75 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // E:w
+selectCodeEditor("test_bench.sv", 50, 356); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 14 seconds
+closeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // ap:DockableFrame (FrameContainer:JideTabbedPane, cl:JFrame)
+// Elapsed time: 13 seconds
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "tb0 ; tristate_buffer ; Verilog Module", 1, "tb0", 0, false); // d:av (JViewport:JComponent, cl:JFrame)
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "tb0 ; tristate_buffer ; Verilog Module", 1, "tristate_buffer", 1, false); // d:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "glbl ; glbl ; Verilog Module", 2, "glbl", 0, false); // d:av (JViewport:JComponent, cl:JFrame)
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "testbench_tristate_buffer ; testbench_tristate_buffer ; Verilog Module", 0, "testbench_tristate_buffer", 0, true); // d:av (JViewport:JComponent, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// Elapsed time: 17 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:12 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8201 ; free virtual = 26935 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_tristate_buffer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [Common 17-186] '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_tristate_buffer_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Sep 30 23:00:08 2015. For additional details about this file, please refer to the WebTalk help file at /afs/ece/support/xilinx/xilinx.release/Vivado/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:00:08 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_tristate_buffer_behav -key {Behavioral:sim_1:Functional:testbench_tristate_buffer} -tclbatch {testbench_tristate_buffer.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: source testbench_tristate_buffer.tcl 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 80 MB (+2957kb) [00:11:19]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: x=0, en=1, y=0 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:22 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8196 ; free virtual = 26931 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_tristate_buffer_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8196 ; free virtual = 26931 
+// 'c' command handler elapsed time: 44 seconds
+// Elapsed time: 27 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_bench.sv", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 10 seconds
+selectCodeEditor("test_bench.sv", 171, 94, false, false, false, true, false); // bj:J (JPanel:JComponent, cl:JFrame) - Popup Trigger
+selectTreeTable(PAResourceQtoS.SimulationScopesPanel_SIMULATION_SCOPES_TREE_TABLE, "testbench_tristate_buffer ; testbench_tristate_buffer ; Verilog Module", 0, "testbench_tristate_buffer", 0, true, false, false, false, true, false); // d:av (JViewport:JComponent, cl:JFrame) - Popup Trigger - Node
+selectMenuItem((HResource) null, "Go To Source Code"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// TclEventType: SIMULATION_OPEN_SOURCE
+// Elapsed time: 37 seconds
+selectCodeEditor("test_bench.sv", 70, 163, false, false, false, true, false); // bj:J (JPanel:JComponent, cl:JFrame) - Popup Trigger
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 2", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+selectButton(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "run_synthesis"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Sep 30 23:02:10 2015] Launched synth_1... Run output will be captured here: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.runs/synth_1/runme.log 
+// 'm' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Synthesis Completed"); // Q:ap (cl:JFrame)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 2"); // E:w
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// Elapsed time: 16 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:12 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8177 ; free virtual = 26912 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_tristate_buffer' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 3932736094 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/pro..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_tristate_buffer_behav/webtalk/xsim_webtalk.t..." line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:03:05 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_tristate_buffer_behav -key {Behavioral:sim_1:Functional:testbench_tristate_buffer} -tclbatch {testbench_tristate_buffer.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: source testbench_tristate_buffer.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: x=0, en=1, y=0 xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8175 ; free virtual = 26909 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_tristate_buffer_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 5960.656 ; gain = 0.000 ; free physical = 8175 ; free virtual = 26909 
+// 'c' command handler elapsed time: 43 seconds
+// Elapsed time: 26 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "test_bench.sv", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// Elapsed time: 54 seconds
+closeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // ap:DockableFrame (FrameContainer:JideTabbedPane, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_FILESET_WINDOW, "Sources"); // ab:JMenuItem (JPopupMenu:JComponent, cl:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_FILESET_WINDOW
+// [GUI Memory]: 85 MB (+854kb) [00:15:53]
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench_tristate_buffer (test_bench.sv)]", 15, true); // A:k (H:JPanel, cl:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench_tristate_buffer (test_bench.sv)]", 15, true, false, false, false, false, true); // A:k (H:JPanel, cl:JFrame) - Double Click - Node
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench_LS244 (test_bench.sv)]", 18, false); // A:k (H:JPanel, cl:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench_LS244 (test_bench.sv)]", 18, false, false, false, false, true, false); // A:k (H:JPanel, cl:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // X:JMenu (ai:JPopupMenu, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top testbench_LS244 [get_filesets sim_1] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_lib xil_defaultlib [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_LS244' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: xvlog -m64 --relax -prj testbench_LS244_vlog.prj INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench_tristate_buffer INFO: [VRFC 10-311] analyzing module testbench_LS244 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 2495532633 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/pro..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_LS244_behav/webtalk/xsim_webtalk.tcl" line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:05:44 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_LS244_behav -key {Behavioral:sim_1:Functional:testbench_LS244} -tclbatch {testbench_LS244.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 37 MB. Current time: 9/30/15 11:05:56 PM EDT
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: source testbench_LS244.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: # run 1000ns 
+// Tcl Message: A=00000000, en_A=1, en_B=0, Q=00000000 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 6002.297 ; gain = 41.641 ; free physical = 8168 ; free virtual = 26902 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_LS244_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 6002.297 ; gain = 41.641 ; free physical = 8168 ; free virtual = 26902 
+// 'c' command handler elapsed time: 21 seconds
+// Elapsed time: 21 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 50 MB. Current time: 9/30/15 11:06:23 PM EDT
+// Elapsed time: 23 seconds
+closeFrame(PAResourceOtoP.PAViews_OBJECTS, "Objects"); // ap:DockableFrame (FrameContainer:JideTabbedPane, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 38, 100, false, false, false, true, false); // o:a (JViewport:JComponent, cl:JFrame) - Popup Trigger
+selectMenuItem((HResource) null, "Full View"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:06:30 PM EDT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:06:39 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:06:40 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 18 seconds
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:06:56 PM EDT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:03 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:34 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:35 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:37 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:38 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:38 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:39 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:40 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:07:40 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:41 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:43 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:44 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:45 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:46 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:47 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:48 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:07:48 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,046 MB. GUI used memory: 39 MB. Current time: 9/30/15 11:07:49 PM EDT
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 63 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 4"); // E:w
+// Elapsed time: 33 seconds
+selectCodeEditor("test_bench.sv", 181, 476); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// Elapsed time: 18 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.63 ; elapsed = 00:00:09 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8172 ; free virtual = 26907 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_LS244' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvlog -m64 --relax -prj testbench_LS244_vlog.prj INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench_tristate_buffer INFO: [VRFC 10-311] analyzing module testbench_LS244 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 3887748206 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/pro..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_LS244_behav/webtalk/xsim_webtalk.tcl" line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:09:39 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_LS244_behav -key {Behavioral:sim_1:Functional:testbench_LS244} -tclbatch {testbench_LS244.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: source testbench_LS244.tcl 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: A=00000000, en_A=1, en_B=0, Q=00000000 xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8168 ; free virtual = 26903 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_LS244_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8168 ; free virtual = 26903 
+// 'c' command handler elapsed time: 41 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 5"); // E:w
+selectButton(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "run_synthesis"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Wed Sep 30 23:10:13 2015] Launched synth_1... Run output will be captured here: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.runs/synth_1/runme.log 
+// 'm' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 27 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Synthesis Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// [GUI Memory]: 89 MB (+588kb) [00:21:58]
+// Elapsed time: 17 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:10 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8041 ; free virtual = 26776 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_LS244' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: xvlog -m64 --relax -prj testbench_LS244_vlog.prj INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench_tristate_buffer INFO: [VRFC 10-311] analyzing module testbench_LS244 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 1388705357 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/pro..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_LS244_behav/webtalk/xsim_webtalk.tcl" line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:11:14 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_LS244_behav -key {Behavioral:sim_1:Functional:testbench_LS244} -tclbatch {testbench_LS244.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: source testbench_LS244.tcl 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: A=00000000, en_A=1, en_B=0, Q=00000000 xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8162 ; free virtual = 26897 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_LS244_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8162 ; free virtual = 26897 
+// 'c' command handler elapsed time: 40 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:11:40 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 40 MB. Current time: 9/30/15 11:11:41 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 40 MB. Current time: 9/30/15 11:11:43 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 15 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 6"); // E:w
+// Elapsed time: 76 seconds
+selectCodeEditor("test_bench.sv", 201, 225); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 107 seconds
+selectCodeEditor("test_bench.sv", 213, 215); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "run_synthesis"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// cp:P (cl:JFrame):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cp:P (cl:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Wed Sep 30 23:15:03 2015] Launched synth_1... Run output will be captured here: /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.runs/synth_1/runme.log 
+// 'm' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // cp:P (cl:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ap (cl:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ap)
+dismissDialog("Synthesis Completed"); // Q:ap (cl:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+// Elapsed time: 10 seconds
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// Elapsed time: 14 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:10 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8159 ; free virtual = 26894 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_LS244' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: xvlog -m64 --relax -prj testbench_LS244_vlog.prj INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench_tristate_buffer INFO: [VRFC 10-311] analyzing module testbench_LS244 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: INFO: [Common 17-186] '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_LS244_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Sep 30 23:15:59 2015. For additional details about this file, please refer to the WebTalk help file at /afs/ece/support/xilinx/xilinx.release/Vivado/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:15:59 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_LS244_behav -key {Behavioral:sim_1:Functional:testbench_LS244} -tclbatch {testbench_LS244.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: source testbench_LS244.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: A=00000000, en_A=1, en_B=0, Q=00000000 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8158 ; free virtual = 26893 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_LS244_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8158 ; free virtual = 26893 
+// 'c' command handler elapsed time: 36 seconds
+// Elapsed time: 22 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// Elapsed time: 30 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 138, 226, false, false, false, true, false); // o:a (JViewport:JComponent, cl:JFrame) - Popup Trigger
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectMenuItem((HResource) null, "Full View"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:16:50 PM EDT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:16:59 PM EDT
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:03 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:04 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:05 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:09 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:10 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:10 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:11 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:14 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:14 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:15 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:16 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:20 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:21 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:17:22 PM EDT
+// Elapsed time: 29 seconds
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 13 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 7"); // E:w
+selectCodeEditor("test_bench.sv", 186, 363); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 53 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // w:Y (v:H, cl:JFrame)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: FILE_SET_CHANGE
+// d:cp (cl:JFrame):  Run Simulation : addNotify
+// Elapsed time: 12 seconds
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, T:JDialog)
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:08 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8159 ; free virtual = 26894 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [USF-XSim-27] Simulation object is 'sim_1' INFO: [USF-XSim-37] Inspecting design source files for 'testbench_LS244' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// Tcl Message: xvlog -m64 --relax -prj testbench_LS244_vlog.prj INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.srcs/sources_1/imports/sound_mp/test_bench.sv" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench_tristate_buffer INFO: [VRFC 10-311] analyzing module testbench_LS244 INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message:      while executing "webtalk_transmit -clientid 3196941131 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/pro..."     (file "/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav/xsim.dir/testbench_LS244_behav/webtalk/xsim_webtalk.tcl" line 42) INFO: [Common 17-206] Exiting Webtalk at Wed Sep 30 23:19:03 2015... 
+// Tcl Message: INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/ece.cmu.edu/usr/rsaigal/18-545/audio/sound_mp/project_1/project_1.sim/sim_1/behav' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_LS244_behav -key {Behavioral:sim_1:Functional:testbench_LS244} -tclbatch {testbench_LS244.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2015.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Tcl Message: source testbench_LS244.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: A=00000000, en_A=1, en_B=0, Q=00000000 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8157 ; free virtual = 26892 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_LS244_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 6002.297 ; gain = 0.000 ; free physical = 8157 ; free virtual = 26892 
+// 'c' command handler elapsed time: 35 seconds
+// Elapsed time: 23 seconds
+dismissDialog("Run Simulation"); // d:cp (cl:JFrame)
+// [GUI Memory]: 94 MB (+190kb) [00:30:15]
+// Elapsed time: 10 seconds
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 190, 124, false, false, false, true, false); // o:a (JViewport:JComponent, cl:JFrame) - Popup Trigger
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 42 MB. Current time: 9/30/15 11:19:33 PM EDT
+selectMenuItem((HResource) null, "Full View"); // ab:JMenuItem (ai:JPopupMenu, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+selectButton(RDIResource.GraphicalView_ZOOM_IN, "Waveform Viewer_zoom_in"); // w:JideButton (CommandBar:DockableBar, cl:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 42 MB. Current time: 9/30/15 11:19:45 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,041 MB. GUI used memory: 41 MB. Current time: 9/30/15 11:19:50 PM EDT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// Elapsed time: 17 seconds
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 8"); // E:w
+selectCodeEditor("test_bench.sv", 207, 391); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 32 seconds
+selectCodeEditor("test_bench.sv", 37, 444); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("test_bench.sv", 148, 475); // bj:J (JPanel:JComponent, cl:JFrame)
+typeControlKey((HResource) null, "test_bench.sv", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "test_bench.sv", 'v'); // bj:J (JPanel:JComponent, cl:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 60 seconds
+selectCodeEditor("test_bench.sv", 21, 161); // bj:J (JPanel:JComponent, cl:JFrame)
+selectCodeEditor("test_bench.sv", 262, 258); // bj:J (JPanel:JComponent, cl:JFrame)

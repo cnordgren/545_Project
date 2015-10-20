@@ -1,0 +1,5 @@
+
+module soundAddressDecoder(input logic addr[15:0],
+			   input logic rdclk, wrclk,
+			   output logic SROM0_l, SROM1_l, SROM2_l,
+			   output logic SNDEXT_l, MXT

@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/demo/source/pokeyaudio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pokeyaudio
+INFO: [VRFC 10-311] analyzing module distortChn
+INFO: [VRFC 10-311] analyzing module clockHalf
+INFO: [VRFC 10-311] analyzing module distortion
+INFO: [VRFC 10-311] analyzing module divideByN
+INFO: [VRFC 10-311] analyzing module divideByN16bit
+INFO: [VRFC 10-311] analyzing module highpass
+INFO: [VRFC 10-311] analyzing module poly4bit
+INFO: [VRFC 10-311] analyzing module poly5bit
+INFO: [VRFC 10-311] analyzing module poly17or9bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/demo/synthesis/midSemDemo/midSemDemo.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

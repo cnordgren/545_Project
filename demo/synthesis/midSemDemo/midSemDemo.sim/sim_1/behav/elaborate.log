@@ -1,0 +1,84 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: /afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin/unwrapped/lnx64.o/xelab -wto 96d637e94c6c455fbf19c529458fcf07 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pokeyaudio_behav xil_defaultlib.pokeyaudio xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/retarget/FDCPE.v" Line 23. Module FDCPE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 86. Module FDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0,IS_C_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 26. Module ffsrce_fdce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 86. Module FDPE(INIT=1'b0,IS_C_INVERTED=1'b0,IS_PRE_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 26. Module ffsrce_fdpe has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 26. Module LDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 182. Module latchsre_ldce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 26. Module LUT3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4_reduced_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/retarget/FDCPE.v" Line 23. Module FDCPE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 86. Module FDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0,IS_C_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 26. Module ffsrce_fdce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 86. Module FDPE(INIT=1'b0,IS_C_INVERTED=1'b0,IS_PRE_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 26. Module ffsrce_fdpe has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 26. Module LDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 182. Module latchsre_ldce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 26. Module LUT3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4_reduced_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/retarget/FDCPE.v" Line 23. Module FDCPE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 86. Module FDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0,IS_C_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 26. Module ffsrce_fdce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 86. Module FDPE(INIT=1'b0,IS_C_INVERTED=1'b0,IS_PRE_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 26. Module ffsrce_fdpe has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 26. Module LDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 182. Module latchsre_ldce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 26. Module LUT3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4_reduced_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/retarget/FDCPE.v" Line 23. Module FDCPE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 86. Module FDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0,IS_C_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 26. Module ffsrce_fdce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 86. Module FDPE(INIT=1'b0,IS_C_INVERTED=1'b0,IS_PRE_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 26. Module ffsrce_fdpe has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 26. Module LDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 182. Module latchsre_ldce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 26. Module LUT3 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LUT3.v" Line 62. Module x_lut3_mux4_reduced_0 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/retarget/FDCPE.v" Line 23. Module FDCPE has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 86. Module FDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0,IS_C_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDCE.v" Line 26. Module ffsrce_fdce has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 86. Module FDPE(INIT=1'b0,IS_C_INVERTED=1'b0,IS_PRE_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/FDPE.v" Line 26. Module ffsrce_fdpe has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/buildscratch/2015.2/continuous/20150626163259/data/verilog/src/unisims/LDCE.v" Line 26. Module LDCE(INIT=1'b0,IS_CLR_INVERTED=1'b0) has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.ffsrce_fdce
+Compiling module unisims_ver.FDCE(INIT=1'b0,IS_CLR_INVERTED=1...
+Compiling module unisims_ver.ffsrce_fdpe
+Compiling module unisims_ver.FDPE(INIT=1'b0,IS_C_INVERTED=1'b...
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE(INIT=1'b0,IS_CLR_INVERTED=1...
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDCPE
+Compiling module xil_defaultlib.poly4bit
+Compiling module xil_defaultlib.poly5bit
+Compiling module xil_defaultlib.poly17or9bit
+Compiling module unisims_ver.FDCE
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.divideByN
+Compiling module xil_defaultlib.highpass
+Compiling module xil_defaultlib.divideByN16bit
+Compiling module xil_defaultlib.distortion
+Compiling module xil_defaultlib.clockHalf
+Compiling module xil_defaultlib.distortChn
+Compiling module xil_defaultlib.pokeyaudio
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pokeyaudio_behav

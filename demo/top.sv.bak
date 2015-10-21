@@ -30,6 +30,7 @@ module top();
 
 	assign tri_en = MXT | SBA[6];
 	tristate t1(.left(SD), .right(SBD), .switch(RW_l), .en(tri_en));
+	
 	tristate t2(.left(SD), .right(SMD), .switch(RW_l), .en(~MXT));
    
    

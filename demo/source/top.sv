@@ -17,6 +17,7 @@ module top();
    logic	SRAM0_l, SRAM1_l;
    logic	SNDEXT_l, CSND_l, YMHCS_l;
    logic	SIOWR_l, WR68k_l, SIORD_l, RD68k_l; 
+   logic	audio_out;
 
    assign WR_l = ~RW_l;
 
@@ -45,7 +46,7 @@ module top();
    
    
    //Pokey Audio Synthesis Chip
-   
+   	pokey_wrapper myPokey(.ADDR_BUS(SBA[3:0]), .R_W(WR_l), .mainClock(clock_15), .dataBus(SD), .SC(audio_out));
    
    //PWM Audio output interface
    

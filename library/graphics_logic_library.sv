@@ -1,5 +1,68 @@
-//4-bit flip-flop counter
-//CTEN = count_enable, DU = down/up, RCO = ripple_clock_output
+//PLAYFIELD HORIZONTAL SCROLL
+//LS273	--
+//LS163A
+//LS74
+//S189
+//S273
+
+//PLAYFIELD PRIORITY
+//LS273	--
+//S151	--
+
+//PLAYFIELD VERTICAL SCROLL
+//LS273	--
+//LS191	--
+
+//VIDEO RAM AND DATA BUFFER
+//LS153
+//LS151	--
+//LS373
+//LS244
+//LS174
+//LS245
+
+//CONTROL REGISTER
+//LS273	--
+
+//ALPHANUMERICS
+//LS273	--
+//23128
+//LS194	--
+//LS174
+//LS378
+
+//GRAPHIC PRIORITY CONTROL
+//82S129
+//LS74
+
+//MOTION OBJECT HORIZONTAL LINE BUFFER CONTROL
+//S74
+//LS374
+//LS174
+//LS273	--
+//LS283
+//LS139
+//LS257
+
+//MOTION OBJECT HORIZONTAL LINE BUFFER
+//LS273	--
+//LS174
+//S163
+//2149-2
+//LS244
+//S374
+
+//COLOR RAM
+//LS153
+//LS374
+//LS244
+//LS245
+
+//MONITOR INTERFACE
+//LS273	--
+
+// 4-bit flip-flop counter
+// CTEN = count_enable, DU = down/up, RCO = ripple_clock_output
 module LS191(
   input logic CTEN, DU, clk, load,
   input logic a, b, c, d,
@@ -67,14 +130,25 @@ module LS194(
 endmodule
 
 // 8-bit flip-flop
-module LS273(
-  input logic [7:0] d,
+module LS273
+#(parameter width=8)
+ (input logic [width-1:0] d,
   input logic clk, clr,
-  output logic [7:0] q);
+  output logic [width-1:0] q);
   
   always_ff @(negedge clr, posedge clk) begin
-    if(~clr) q[7:0] <= 8'h0;
-    else q[7:0] <= d[7:0];
+    if(~clr) q[width-1:0] <= 0;
+    else q[width-1:0] <= d[width-1:0];
   end
-  
 endmodule
+// 8-bit Multiplexer
+module S151(
+  input logic [7:0] in,
+  input logic [2:0] select,
+  output logic out, notOut);
+
+  assign out = in[select];
+  assign notOut = ~out;
+endmodule
+// 
+module LS174(

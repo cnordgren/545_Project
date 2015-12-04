@@ -1,2 +1,0 @@
-module synchronizer(input logic clk, vreset_l,
-		    

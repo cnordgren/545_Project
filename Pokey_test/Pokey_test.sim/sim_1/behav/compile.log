@@ -1,15 +1,1 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_test/Pokey_test.srcs/sources_1/imports/Audio/pokeyaudio.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module pokeyaudio
-INFO: [VRFC 10-311] analyzing module distortChn
-INFO: [VRFC 10-311] analyzing module clockHalf
-INFO: [VRFC 10-311] analyzing module distortion
-INFO: [VRFC 10-311] analyzing module divideByN
-INFO: [VRFC 10-311] analyzing module divideByN16bit
-INFO: [VRFC 10-311] analyzing module highpass
-INFO: [VRFC 10-311] analyzing module poly4bit
-INFO: [VRFC 10-311] analyzing module poly5bit
-INFO: [VRFC 10-311] analyzing module poly17or9bit
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_test/Pokey_test.srcs/sim_1/new/distortChn_testbench.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module distortChn_testbench
-INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_test/Pokey_test.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
+CRITICAL WARNING: [Common 17-183] Failed to open handle xvlog.log. Please check access permission of directory '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin'. You should restart the application from a writable working directory.

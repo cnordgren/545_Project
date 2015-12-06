@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/afs/ece.cmu.edu/usr/rsaigal/18-545/Pokey_test/Pokey_test.xpr">
+<Project Version="7" Minor="5" Path="/afs/ece.cmu.edu/usr/rsaigal/18-545/545_Project/Pokey_test/Pokey_test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9634fa7eb3174e1c896fd2691ff8b962"/>
@@ -21,7 +21,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/Audio/pokeyaudio.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../POKEY/Audio/pokeyaudio.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../POKEY/Audio/pokeyaudio.v"/>
           <Attr Name="ImportTime" Val="1444838484"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -44,7 +44,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/distortChn_testbench.sv">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortChn_testbench.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortChn_testbench.sv"/>
           <Attr Name="ImportTime" Val="1444924026"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -62,7 +62,7 @@
       <File Path="$PSRCDIR/sim_1/new/poly5bit_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly5bit_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly5bit_tb.sv"/>
           <Attr Name="ImportTime" Val="1444884997"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -72,7 +72,7 @@
       <File Path="$PSRCDIR/sim_1/new/poly4bit_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly4bit_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly4bit_tb.sv"/>
           <Attr Name="ImportTime" Val="1444885495"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -82,7 +82,7 @@
       <File Path="$PSRCDIR/sim_1/new/poly17or9bit_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly17or9bit_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/poly17or9bit_tb.sv"/>
           <Attr Name="ImportTime" Val="1444920026"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -92,7 +92,7 @@
       <File Path="$PSRCDIR/sim_1/new/highpass_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/highpass_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/highpass_tb.sv"/>
           <Attr Name="ImportTime" Val="1444921178"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -102,7 +102,7 @@
       <File Path="$PSRCDIR/sim_1/new/divideByN_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/divideByN_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/divideByN_tb.sv"/>
           <Attr Name="ImportTime" Val="1444922544"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -112,7 +112,7 @@
       <File Path="$PSRCDIR/sim_1/new/divideByN16bit_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/divideByN16bit_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/divideByN16bit_tb.sv"/>
           <Attr Name="ImportTime" Val="1444919421"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -122,7 +122,7 @@
       <File Path="$PSRCDIR/sim_1/new/distortion_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortion_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortion_tb.sv"/>
           <Attr Name="ImportTime" Val="1444923177"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -132,7 +132,7 @@
       <File Path="$PSRCDIR/sim_1/new/distortChn_tb.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortChn_tb.sv"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Pokey_tb/Pokey_tb.srcs/sim_1/new/distortChn_tb.sv"/>
           <Attr Name="ImportTime" Val="1444923684"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

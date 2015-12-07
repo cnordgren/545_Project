@@ -1,0 +1,448 @@
+
+*** Running vivado
+    with args -log graphicsPipeline.vds -m64 -mode batch -messageDb vivado.pb -notrace -source graphicsPipeline.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source graphicsPipeline.tcl -notrace
+Command: synth_design -top graphicsPipeline -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1063.828 ; gain = 154.520 ; free physical = 7656 ; free virtual = 20007
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'graphicsPipeline' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/graphicsPipeline.sv:2]
+INFO: [Synth 8-638] synthesizing module 'vga' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:2]
+INFO: [Synth 8-638] synthesizing module 'counter' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter' (1#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized0' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized0' (1#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized1' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+	Parameter WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized1' (1#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized2' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized2' (1#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+INFO: [Synth 8-638] synthesizing module 'counter__parameterized3' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+	Parameter WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter__parameterized3' (1#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:103]
+INFO: [Synth 8-638] synthesizing module 'range_check' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'range_check' (2#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+INFO: [Synth 8-638] synthesizing module 'range_check__parameterized0' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'range_check__parameterized0' (2#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+INFO: [Synth 8-638] synthesizing module 'range_check__parameterized1' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+	Parameter WIDTH bound to: 20 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'range_check__parameterized1' (2#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:47]
+INFO: [Synth 8-638] synthesizing module 'comparator' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:72]
+	Parameter WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'comparator' (3#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:72]
+WARNING: [Synth 8-350] instance 'Max_H' of module 'comparator' requires 5 connections, but only 3 given [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:39]
+INFO: [Synth 8-256] done synthesizing module 'vga' (4#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv:2]
+INFO: [Synth 8-638] synthesizing module 'playfieldRAM' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/playfieldRAM.sv:2]
+INFO: [Synth 8-638] synthesizing module 'encoder' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/playfieldRAM.sv:35]
+INFO: [Synth 8-256] done synthesizing module 'encoder' (5#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/playfieldRAM.sv:35]
+INFO: [Synth 8-3876] $readmem data file 'pfram.hex' is read successfully [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/playfieldRAM.sv:26]
+INFO: [Synth 8-256] done synthesizing module 'playfieldRAM' (6#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/playfieldRAM.sv:2]
+INFO: [Synth 8-638] synthesizing module 'computeTile' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/computeTile.sv:1]
+INFO: [Synth 8-256] done synthesizing module 'computeTile' (7#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/computeTile.sv:1]
+INFO: [Synth 8-638] synthesizing module 'pixelLookup' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:13]
+INFO: [Synth 8-5534] Detected attribute (* RAM_STYLE = "BLOCK" *) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:19]
+INFO: [Synth 8-5534] Detected attribute (* RAM_STYLE = "BLOCK" *) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:21]
+INFO: [Synth 8-3876] $readmem data file 'MotionObject.hex' is read successfully [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:30]
+INFO: [Synth 8-3876] $readmem data file 'StaticObject.hex' is read successfully [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:31]
+INFO: [Synth 8-256] done synthesizing module 'pixelLookup' (8#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/pixelLookup.sv:13]
+INFO: [Synth 8-638] synthesizing module 'motionObjects' [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/motionObjects.sv:2]
+INFO: [Synth 8-256] done synthesizing module 'motionObjects' (9#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/motionObjects.sv:2]
+INFO: [Synth 8-256] done synthesizing module 'graphicsPipeline' (10#1) [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/graphicsPipeline.sv:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1105.117 ; gain = 195.809 ; free physical = 7613 ; free virtual = 19965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1105.117 ; gain = 195.809 ; free physical = 7612 ; free virtual = 19965
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vivadoTest/vivadoTest.srcs/constrs_1/imports/18-545/Nexys4_Master.xdc]
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vivadoTest/vivadoTest.srcs/constrs_1/imports/18-545/Nexys4_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1451.586 ; gain = 0.000 ; free physical = 7415 ; free virtual = 19767
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7413 ; free virtual = 19765
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7413 ; free virtual = 19765
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7413 ; free virtual = 19765
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "Y" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "spriteRow" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "motionLookup" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7402 ; free virtual = 19755
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	  16 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	  52 Input      4 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 4     
+	  16 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	  51 Input      1 Bit        Muxes := 1     
+	  15 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module graphicsPipeline 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      4 Bit        Muxes := 3     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module encoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+Module computeTile 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+Module pixelLookup 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  52 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  51 Input      1 Bit        Muxes := 1     
+Module motionObjects 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 6     
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+	  16 Input      3 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7402 ; free virtual = 19755
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7379 ; free virtual = 19732
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7379 ; free virtual = 19732
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++-----------------+------------+---------------+----------------+
+|Module Name      | RTL Object | Depth x Width | Implemented As | 
++-----------------+------------+---------------+----------------+
+|playfieldRAM     | rom        | 1024x8        | LUT            | 
+|playfieldRAM     | rom__1     | 1024x8        | LUT            | 
+|pixelLookup      | rom__2     | 256x4         | LUT            | 
+|pixelLookup      | rom__3     | 256x4         | LUT            | 
+|pixelLookup      | rom__4     | 256x4         | LUT            | 
+|pixelLookup      | rom__5     | 4096x8        | LUT            | 
+|pixelLookup      | rom__6     | 16384x8       | LUT            | 
+|pixelLookup      | rom__7     | 256x4         | LUT            | 
+|pixelLookup      | rom__8     | 256x4         | LUT            | 
+|pixelLookup      | rom__9     | 256x4         | LUT            | 
+|pixelLookup      | rom__10    | 4096x8        | LUT            | 
+|pixelLookup      | rom__11    | 16384x8       | LUT            | 
+|graphicsPipeline | rom        | 1024x8        | LUT            | 
++-----------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7379 ; free virtual = 19732
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7379 ; free virtual = 19732
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7379 ; free virtual = 19732
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7324 ; free virtual = 19677
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1451.586 ; gain = 542.277 ; free physical = 7323 ; free virtual = 19676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    20|
+|3     |LUT1   |    44|
+|4     |LUT2   |    85|
+|5     |LUT3   |    79|
+|6     |LUT4   |   127|
+|7     |LUT5   |   190|
+|8     |LUT6   |   478|
+|9     |MUXF7  |    84|
+|10    |MUXF8  |    15|
+|11    |FDCE   |    52|
+|12    |FDRE   |     2|
+|13    |IBUF   |     2|
+|14    |OBUF   |    14|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+------------------------+------+
+|      |Instance    |Module                  |Cells |
++------+------------+------------------------+------+
+|1     |top         |                        |  1194|
+|2     |  pix       |pixelLookup             |    70|
+|3     |  v         |vga                     |  1105|
+|4     |    clkDiv  |counter                 |     4|
+|5     |    cols    |counter__parameterized1 |   193|
+|6     |    count_H |counter__parameterized0 |    28|
+|7     |    count_V |counter__parameterized2 |    87|
+|8     |    rows    |counter__parameterized3 |   793|
++------+------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1479.602 ; gain = 107.305 ; free physical = 7270 ; free virtual = 19623
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1479.602 ; gain = 570.293 ; free physical = 7270 ; free virtual = 19623
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1511.617 ; gain = 493.789 ; free physical = 7270 ; free virtual = 19623
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1543.637 ; gain = 0.000 ; free physical = 7268 ; free virtual = 19621
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  5 15:36:39 2015...

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at vga.sv(9): object "tdisp_H" differs only in case from object "Tdisp_H" in the same scope
+Info (10281): Verilog HDL Declaration information at vga.sv(9): object "tdisp_V" differs only in case from object "Tdisp_V" in the same scope
+Info (10281): Verilog HDL Declaration information at vga.sv(9): object "max_H" differs only in case from object "Max_H" in the same scope

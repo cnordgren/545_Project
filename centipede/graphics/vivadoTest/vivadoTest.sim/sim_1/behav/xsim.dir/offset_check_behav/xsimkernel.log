@@ -1,0 +1,7 @@
+Running: xsim.dir/offset_check_behav/xsimk -simmode gui -wdb offset_check_behav.wdb -simrunnum 0 -socket 47878
+Design successfully loaded
+Design Loading Memory Usage: 225832 KB (Peak: 225852 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 299568 KB (Peak: 365104 KB)
+Simulation CPU Usage: 30 ms

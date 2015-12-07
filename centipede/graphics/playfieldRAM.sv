@@ -1,16 +1,16 @@
-`define SIM
-
-module playfieldRAM(input clk, rst_l, we_l,
-		    input [3:0]  cs
-		    input [7:0]  addrA, addrB,
-		    input [7:0]  datain, 
-		    output [7:0] dataA, dataB);
-
-   logic [1023:0][7:0] 		  data;
-   logic [1:0] 			  addrTop;
+`define TEST
+module playfieldRAM(input logic        clk, rst_l, we_l,
+		    input logic [3:0]  cs,
+		    input logic [7:0]  addrA, 
+		    input logic [9:0]  addrB,
+		    input logic [7:0]  datain, 
+		    output logic [7:0] dataA, dataB);
+   
+   logic [7:0] data[1024];
+   logic [1:0] addrTop;
    
    encoder csEnc(.A(cs), .Y(addrTop));
-   
+`ifndef TEST
    always_ff@(posedge clk, negedge rst_l) begin
 `ifdef SIM
       if(~rst_l)
@@ -22,17 +22,27 @@ module playfieldRAM(input clk, rst_l, we_l,
 	data[{addrTop, addrA}] <= datain;
 `endif
    end
+`else // !`ifndef TEST
+   initial begin
+      $readmemh("pfram.hex", data);
+   end
+`endif // !`ifndef TEST
 
-   assign dataA = data[{addrTop, addrA}];
-   assign dataB = data[{addrTop, addrB}];
-   
+   // Synchronous RAM outputs
+   always_ff@(posedge clk) begin
+      dataA <= data[{addrTop, addrA}];
+      dataB <= data[addrB];
+      //dataB <= 8'h00;
+      
+   end
+  
 endmodule: playfieldRAM
 
-module encoder(input [3:0] A,
-	       output [1:0] Y);
+module encoder(input logic  [3:0] A,
+	       output logic [1:0] Y);
 
    always_comb begin
-      case(cs)
+      case(A)
 	4'b0000:
 	  Y = 2'd0;
 	4'b0010:

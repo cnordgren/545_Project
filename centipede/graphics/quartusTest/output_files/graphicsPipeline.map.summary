@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec  6 18:14:41 2015
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Full Version
+Revision Name : graphicsPipeline
+Top-level Entity Name : graphicsPipeline
+Family : Cyclone IV E
+Total logic elements : 1,360
+    Total combinational functions : 912
+    Dedicated logic registers : 837
+Total registers : 837
+Total pins : 34
+Total virtual pins : 0
+Total memory bits : 286,976
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

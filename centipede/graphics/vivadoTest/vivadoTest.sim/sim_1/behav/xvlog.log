@@ -1,0 +1,19 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vga.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-311] analyzing module range_check
+INFO: [VRFC 10-311] analyzing module offset_check
+INFO: [VRFC 10-311] analyzing module comparator
+INFO: [VRFC 10-311] analyzing module PriorityEncoder
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-311] analyzing module mux4to1
+INFO: [VRFC 10-311] analyzing module mux2to1
+INFO: [VRFC 10-311] analyzing module decoder
+INFO: [VRFC 10-311] analyzing module def_register
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-311] analyzing module shift_register
+INFO: [VRFC 10-311] analyzing module clock
+INFO: [VRFC 10-311] analyzing module latchl
+INFO: [VRFC 10-2263] Analyzing Verilog file "/afs/ece.cmu.edu/usr/cnordgre/Private/18545/545_Project/centipede/graphics/vivadoTest/vivadoTest.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

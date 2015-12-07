@@ -1,4 +1,4 @@
-module	ls257	#(parameter width = 4)
+module	LS257	#(parameter width = 4)
 		(input logic [width-1:0] a, b,
 		 input logic select, read_l,
 		output logic [width-1:0] out);
@@ -6,6 +6,6 @@ module	ls257	#(parameter width = 4)
 	logic [width-1:0] data;
 
 	assign data = (select) ? b : a;
-	assign out = (read_l) ? (width-1)'dz : data;
+	assign out = (read_l) ? 'z : data;
 
 endmodule 

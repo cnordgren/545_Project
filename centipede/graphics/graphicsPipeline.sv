@@ -1,4 +1,4 @@
-`define SIM
+//`define SIM
 module graphicsPipeline(input logic        clk, rst_l,
 			input logic 	   pfram_l,
 			input logic [15:0] addr,
@@ -7,7 +7,6 @@ module graphicsPipeline(input logic        clk, rst_l,
 
 			output logic 	   VGA_HS, VGA_VS, VGA_BLANK_N, VGA_CLK, VGA_SYNC_N,
                         output logic [7:0] VGA_R, VGA_G, VGA_B);
-			);
    
    logic [2:0] staticTileRow, staticTileCol;
    logic [7:0] centRow, centCol;
@@ -29,7 +28,7 @@ module graphicsPipeline(input logic        clk, rst_l,
 	 .row(vga_row), .col(vga_col));
    
    playfieldRAM pfram(.clk(clk), .rst_l(rst_l), .we_l(pfram_l),
-                      .addrA(addr), .addrB(staticTileAddr),
+                      .addrA(addr[9:0]), .addrB(staticTileAddr),
 		      .datain(data_in),
 		      .dataA(data_out), .dataB(staticSpriteID));
    
@@ -83,7 +82,7 @@ module graphicsPipeline(input logic        clk, rst_l,
    end
 
 endmodule: graphicsPipeline
-
+/*
 `ifdef SIM
 module test();
    logic clk, rst_l;
@@ -118,3 +117,4 @@ module test();
 endmodule: test
 `endif
 
+*/

@@ -86,7 +86,7 @@ module comparator
    end
 
 endmodule: comparator
-
+/*
 module adder
   #(parameter WIDTH = 8)
    (output logic [WIDTH-1:0] Sum,
@@ -97,6 +97,9 @@ module adder
    assign {Cout, Sum} = A + B + Cin;
 
 endmodule: adder
+*/
+
+
     
 
 //clr takes precidence over en, load, & up

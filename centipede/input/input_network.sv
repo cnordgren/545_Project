@@ -10,7 +10,7 @@ module	input_network	(input logic [3:0] joy1, joy2,			//JOYSTICK
 			 input logic hordir1, horclk1, verdir1, verclk1,//TRACKBALL
 			 input logic hordir2, horclk2, verdir2, verclk2,//TRACKBALL
 			 input logic trackrst_l, steerclr, ballselect,	//TRACKBALL
-			output logic [7:0] data_out);
+			output tri [7:0] data_out);
 
 	logic [3:0] tra, trb; //TRACKBALL
 	logic dir1, dir2; //TRACKBALL

@@ -1,10 +1,3 @@
-//`define ALTERA
-
-`ifdef ALTERA
-module centipede(
-		 
-		 );
-`else
 module centipede(input logic clk,
 		 input logic [15:0] sw,
 		 input logic btnU, btnR, btnL,
@@ -12,15 +5,6 @@ module centipede(input logic clk,
 		output logic ampPWM,
 		output logic [3:0] vgaRed, vgaBlue, vgaGreen,
 		output logic Hsync, Vsync);
-`endif
-
-    //deadwire input/output signals for address decoder
-    logic BR_W, GMHZ, PAC, WRITE_2;
-    logic WATCHDOG, OUT0, IRQRES;
-    logic PF, COLORRAM, NinetyNine, EA_READ;
-    logic EA_CONTROL, EA_ABOR;
-    logic [3:0] rom, PFWR;
-
    //SIGNALS
    //INTERNAL SIGNALS
    logic [15:0] addr;							//Address
@@ -50,9 +34,6 @@ module centipede(input logic clk,
    logic alteraVGAblank, alteraVGAclk, alterVGAsync;			//Altera VGA Signals
 
    //ASSIGN I/O SIGNALS TO BOARD PORTS
-   `ifdef ALTERA
-      
-   `else
    assign boardclk = clk;
    assign optSwitches = sw;
    assign startGame = btnU;
@@ -68,16 +49,12 @@ module centipede(input logic clk,
    assign vgaGreen = green[3:0];
    assign Hsync = vgaHsync;
    assign Vsync = vgaVsync;
-   assign GMHZ = 1'b0;
-   assign PAC = 1'b0;
-   assign BR_W = ~cpu_we_l;
 
+   // Creating clocks
    assign clk_100 = boardclk;
-   
    always_ff @(posedge clk_100) begin
 	clk_50 <= ~clk_50;
    end
-
    logic [5:0] count;
    always_ff @(posedge clk_100) begin
 	if(count != 6'd33)
@@ -87,7 +64,6 @@ module centipede(input logic clk,
 		clk_1_5 <= ~clk_1_5;
 	end
    end
-   `endif
 
    //6502 CPU
    cpu sixty502(.clk(clk_1_5), .reset(~resetSystem), .AB(addr), .DI(data), .DO(cpuDout), .WE(cpu_we_l), .IRQ(1'b0), 
@@ -95,21 +71,24 @@ module centipede(input logic clk,
    assign data = (~POKEY) ? cpuDout : 8'bzzzz_zzzz;
 
    //RAM
-   ram centipedeRAM(.addr(addr[9:0]), write_l(cpu_we_l), .en_l(RAM0), .clk(clk_50), dataBus(data));
+   ram centipedeRAM(.addr(addr[9:0]), .write_l(cpu_we_l), .en_l(RAM0), .clk(clk_50), .dataBus(data));
 
    //ROM
-   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .clk(clk_50), .data(data));
+   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .data(data));
    
    //GRAPHICS
    graphicsPipeline gp(.clk(clk_50), .addr(addr), .data_in(data), .data_out(graphicsDout), .rst_l(~resetSystem),
-		       .VGA_R(red), .VGA_B(blue), VGA_G(green), .VGA_HS(vgaHsync), .VGA_VS(vgaVsync), 
+		       .VGA_R(red), .VGA_B(blue), .VGA_G(green), .VGA_HS(vgaHsync), .VGA_VS(vgaVsync), 
 		       .VGA_BLANK_N(alteraVGAblank), .VGA_CLK(alteraVGAclk), .VGA_SYNC_N(alteraVGAsync));
    assign data = (PFRAMRD) ? graphicsDout : 8'bzzzz_zzzz;		       
 		     
    //ADDRESS DECODER
-   //address_decoder ad(.AB(addr), .WRITE(cpu_we_l), .BR_W(), .GMHZ());
-   
-   address_decoder  ad(.AB(addr), .WRITE(cpu_we_l), .BR_W(BR_W), .GMHZ(GMHZ), .PAC(PAC),
+   logic WRITE_2;
+   logic WATCHDOG, OUT0, IRQRES;
+   logic PF, COLORRAM, NinetyNine, EA_READ;
+   logic EA_CONTROL, EA_ABOR;
+   logic [3:0] rom, PFWR;
+   address_decoder  ad(.AB(addr), .WRITE(cpu_we_l), .BR_W(~cpu_we_l), .GMHZ(1'b0), .PAC(1'b0),
 			.ROM(ROM), .WRITE_2(WRITE_2), .rom(rom), .STEERCLR(STEERCLR), 
                           .WATCHDOG(WATCHDOG), .OUT0(OUT0), .IRQRES(IRQRES), .POKEY(POKEY), .SWRD(SWRD), .PF(PF), .RAM0(RAM0), .COLORRAM(COLORRAM), .NinetyNine
 (NinetyNine), .EA_READ(EA_READ), .EA_CONTROL(EA_CONTROL), .EA_ABOR(EA_ABOR), .IN0(IN0), .IN1(IN1), .PFRAMRD(PFRAMRD), .PFWR(PFWR));
@@ -120,10 +99,10 @@ module centipede(input logic clk,
    assign data = (cpu_we_l) ? pokeyDout : 8'bzzzz_zzzz;
    
    //INPUT
-   input_network in(.ops1(optSwitches[7:0]), .ops2(optSwitches[15:0]),				// OPTION SWITCH BANKS
+   input_network in(.ops1(optSwitches[7:0]), .ops2(optSwitches[15:8]),				// OPTION SWITCH BANKS
    		    .readops_l(SWRD),								// READS OPTIONS TO DATA BUS
 		    .vblank(alteraVGAblank),							// VBLANK?
-		    .start1(startGame), fire1(shoot),						// PLAYER 1 BUTTONS
+		    .start1(startGame), .fire1(shoot),						// PLAYER 1 BUTTONS
 		    .readbut_l(IN0),								// READS BUTTONS TO DATA BUS
 		    .seltri(addr[0]),								// CONTROLS MUXES IN INPUT CIRCUITRY
 		    .hordir1(hordir1), .horclk1(horclk1), .verdir1(verdir1), .verclk1(verclk1),	// PLAYER 1 TRACKBALL

@@ -1,4 +1,4 @@
-`define ALTERA
+//`define ALTERA
 
 `ifdef ALTERA
 module centipede(
@@ -15,9 +15,9 @@ module centipede(input logic clk,
 `endif
 
     //deadwire input/output signals for address decoder
-    logic BR_W, GMHZ, PAC, ROM, WRITE_2;
+    logic BR_W, GMHZ, PAC, WRITE_2;
     logic WATCHDOG, OUT0, IRQRES;
-    logic PF, RAM0, COLORRAM, NinetyNine, EA_READ;
+    logic PF, COLORRAM, NinetyNine, EA_READ;
     logic EA_CONTROL, EA_ABOR;
     logic [3:0] rom, PFWR;
 
@@ -36,6 +36,8 @@ module centipede(input logic clk,
    logic SWRD;                                                          //Gets all option inputs
    logic IN0; 								//READS buttons
    logic POKEY; 							//POKEY enable
+   logic ROM;								//Read from the ROM
+   logic RAM0;								//RAM enable
    //INPUT SIGNALS
    logic [15:0] optSwitches;						//Options switches
    logic startGame, shoot;						//Buttons
@@ -93,10 +95,10 @@ module centipede(input logic clk,
    assign data = (~POKEY) ? cpuDout : 8'bzzzz_zzzz;
 
    //RAM
-   cpuRam ram();
+   ram centipedeRAM(.addr(addr[9:0]), write_l(cpu_we_l), .en_l(RAM0), .clk(clk_50), dataBus(data));
 
    //ROM
-   cpuRom rom();
+   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .clk(clk_50), .data(data));
    
    //GRAPHICS
    graphicsPipeline gp(.clk(clk_50), .addr(addr), .data_in(data), .data_out(graphicsDout), .rst_l(~resetSystem),

@@ -1,7 +1,6 @@
 `define TEST
 module playfieldRAM(input logic        clk, rst_l, we_l,
-		    input logic [3:0]  cs,
-		    input logic [7:0]  addrA, 
+		    input logic [9:0]  addrA, 
 		    input logic [9:0]  addrB,
 		    input logic [7:0]  datain, 
 		    output logic [7:0] dataA, dataB);
@@ -16,10 +15,10 @@ module playfieldRAM(input logic        clk, rst_l, we_l,
       if(~rst_l)
 	data <= 0;
       else if(~we)
-	data[{addrTop, addrA}] <= datain;
+	data[addrA] <= datain;
 `else
       if(~we)
-	data[{addrTop, addrA}] <= datain;
+	data[addrA] <= datain;
 `endif
    end
 `else // !`ifndef TEST
@@ -30,10 +29,8 @@ module playfieldRAM(input logic        clk, rst_l, we_l,
 
    // Synchronous RAM outputs
    always_ff@(posedge clk) begin
-      dataA <= data[{addrTop, addrA}];
-      dataB <= data[addrB];
-      //dataB <= 8'h00;
-      
+      dataA <= data[addrA];
+      dataB <= data[addrB];      
    end
   
 endmodule: playfieldRAM

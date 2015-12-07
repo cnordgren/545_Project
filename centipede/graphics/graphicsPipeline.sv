@@ -1,9 +1,14 @@
 `define SIM
-module graphicsPipeline(input logic        CLOCK_50,
-			input logic [3:0] KEY,
-                        output logic 	   VGA_HS, VGA_VS, VGA_BLANK_N, VGA_CLK, VGA_SYNC_N,
+module graphicsPipeline(input logic        clk, rst_l,
+			input logic 	   pfram_l,
+			input logic [15:0] addr,
+		        input logic [7:0]  data_in,
+			output logic [7:0] data_out,
+
+			output logic 	   VGA_HS, VGA_VS, VGA_BLANK_N, VGA_CLK, VGA_SYNC_N,
                         output logic [7:0] VGA_R, VGA_G, VGA_B);
-   logic       rst_l, clk;
+			);
+   
    logic [2:0] staticTileRow, staticTileCol;
    logic [7:0] centRow, centCol;
    logic       motionSel, motionWide;
@@ -15,9 +20,7 @@ module graphicsPipeline(input logic        CLOCK_50,
    logic [9:0] staticTileAddr;
    logic [1:0] colorCode;
 
-   assign clk = CLOCK_50;
-   assign rst_l = KEY[0];
-   assign VGA_CLK = ~CLOCK_50;
+   assign VGA_CLK = ~clk;
    assign VGA_SYNC_N = 1'b0;
    
    
@@ -25,10 +28,10 @@ module graphicsPipeline(input logic        CLOCK_50,
 	 .HS(VGA_HS), .VS(VGA_VS), .blank_N(VGA_BLANK_N),
 	 .row(vga_row), .col(vga_col));
    
-   playfieldRAM pfram(.clk(clk), .rst_l(rst_l), .we_l(1'b1),
-		      .cs(4'hF), .addrA(8'd0), .addrB(staticTileAddr),
-		      .datain(8'd0),
-		      .dataA(), .dataB(staticSpriteID));
+   playfieldRAM pfram(.clk(clk), .rst_l(rst_l), .we_l(pfram_l),
+                      .addrA(addr), .addrB(staticTileAddr),
+		      .datain(data_in),
+		      .dataA(data_out), .dataB(staticSpriteID));
    
    computeTile compT(.col(vga_col), .row(vga_row),
 		     .output_blank(output_blank),
@@ -44,7 +47,7 @@ module graphicsPipeline(input logic        CLOCK_50,
    
    motionObjects mobs(.clk(clk), .rst_l(rst_l), 
 		      .row(centRow), .col(centCol),
-		      .addr(16'd0), .data_in(8'd0), .we_l(1'b1),
+		      .addr(addr), .data_in(data_in), .we_l(pfram_l),
 		      .motionSel(motionSel), .motionWide(motionWide),
 		      .spriteID(motionSpriteID), 
 		      .mob_row(mob_row), .mob_col(mob_col));

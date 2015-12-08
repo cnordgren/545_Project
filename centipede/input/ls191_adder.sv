@@ -9,12 +9,13 @@ module	LS191	(input logic CTEN, DU, clk, load,
   	logic [3:0] data;
   
   	// Increment or decrement data accordingly
-  	always_comb
+  	always_comb begin
  		case({CTEN, DU})
       			2'b01 : data[3:0] = q[3:0] - 1;
       			2'b00 : data[3:0] = q[3:0] + 1;
       			2'b1x : data[3:0] = q[3:0];
    		endcase
+   	end
   
 	// If nededge load, set output to input. On clock, set normally.
 	always_ff @(negedge load, posedge clk) begin

@@ -44,6 +44,7 @@ module vga
    
 endmodule: vga
 
+/*
 module range_check
   #(WIDTH = 8)
   (input logic [WIDTH-1:0] val, low, high,
@@ -56,7 +57,9 @@ module range_check
 	is_between = 1'b0;
    end
 endmodule: range_check
+*/
 
+/*
 module offset_check
   #(WIDTH = 8)
    (input logic [WIDTH-1:0] val, low, delta,
@@ -68,7 +71,8 @@ module offset_check
    range_check #(WIDTH) rc(.val(val), .low(low), .high(high), .is_between(is_between));
 
 endmodule: offset_check
-
+*/
+/*
 module comparator
   #(parameter WIDTH = 8)
    (output logic AltB, AeqB, AgtB,
@@ -86,6 +90,7 @@ module comparator
    end
 
 endmodule: comparator
+*/
 /*
 module adder
   #(parameter WIDTH = 8)
@@ -101,7 +106,7 @@ endmodule: adder
 
 
     
-
+/*
 //clr takes precidence over en, load, & up
 module counter
   #(WIDTH = 8)
@@ -134,7 +139,7 @@ module counter
    assign Qup = Q + 1'd1;
 
 endmodule: counter
-
+*/
 
 
 /*

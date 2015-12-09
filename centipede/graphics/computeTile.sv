@@ -9,8 +9,6 @@ module computeTile(input logic [9:0] col,
    
    // Calculate values to center the screen
    always_comb begin
-      //centRow = row - 9'd120; // Goes from 0-239 when blank is low
-      //centCol = col - 10'd192; // Goes from 0-255 when blank is low
       interCol = col - 10'd64;
       centRow = 8'd239 - row[8:1];
       // Off by one for some reason, don't ask me why.  It's a hack.

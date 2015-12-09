@@ -1,3 +1,83 @@
+module address_decoder(input logic [15:0] addr,
+		       input logic  we_l,
+		       // Chip selects for I/O
+		       output logic swrd_l,
+		       output logic steerclr_l,
+		       output logic in0_l, in1_l,
+		       output logic tb_flip,
+		       // Chip selects for graphics
+		       output logic pfram_l,
+		       // Chip select for pokey
+		       output logic pokey_l,
+		       // Chip select for CPU ROM/RAM
+		       output logic rom_l, ram_l,
+		       output logic irq_l);
+
+   always_comb begin
+      swrd_l = 1'b1;
+      steerclr_l = 1'b1;
+      in0_l = 1'b1;
+      in1_l = 1'b1;
+      tb_flip = 1'b0;
+      pfram_l = 1'b1;
+      pokey_l = 1'b1;
+      rom_l = 1'b1;
+      ram_l = 1'b1;
+      irq_l = 1'b1;
+      
+      // CPU RAM
+      if(addr <= 16'h03FF) begin
+	 ram_l = 1'b0;
+      end
+      // Playfield RAM
+      else if(addr >= 16'h0400 && addr <= 16'h07FF) begin
+	 pfram_l = 1'b0;
+      end
+      // Option Switches
+      else if(addr == 16'h0800 || addr == 16'h0801) begin
+	 swrd_l = 1'b0;
+      end
+      // Trackball Stuff
+      else if(addr == 16'h0C00 || addr == 16'h0C01) begin
+	 in0_l = 1'b0;
+      end
+      else if(addr == 16'h0C02 || addr == 16'h0C03) begin
+	 in1_l = 1'b0;
+      end
+      // Pokey
+      else if(addr >= 16'h1000 && addr <= 16'h100F) begin
+	 pokey_l = 1'b0;
+      end
+      
+      // High score NVRAM not implemented
+
+      // IRQ ACK
+      else if(addr == 16'h1800) begin
+	 irq_l = 1'b0;
+      end
+      
+      // Coin counter registers not implemented
+
+      // Trackball Flip
+      else if(addr == 16'h1C07) begin
+	 tb_flip = 1'b1;
+      end
+
+      // Watchdog not implemented
+
+      // Trackball counter clear
+      else if(addr == 16'h2400) begin
+	 steerclr_l = 1'b0;
+      end
+
+      // ROM
+      else if(addr >= 16'h2000 && addr <= 16'h3FFF) begin
+	 rom_l = 1'b0;
+      end
+   end // always_comb
+endmodule: address_decoder
+
+/*	
 module address_decoder(input  logic  [15:0] AB, 
                        input  logic  WRITE, BR_W, 
                        input  logic  GMHZ, PAC,
@@ -76,3 +156,4 @@ module address_decoder(input  logic  [15:0] AB,
 
 endmodule
 
+*/

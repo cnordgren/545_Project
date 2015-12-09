@@ -1,6 +1,6 @@
 //`define SIM
 module graphicsPipeline(input logic        clk, rst_l,
-			input logic 	   pfram_l,
+			input logic 	   we_l, cs_l,
 			input logic [15:0] addr,
 		        input logic [7:0]  data_in,
 			output logic [7:0] data_out,
@@ -27,7 +27,7 @@ module graphicsPipeline(input logic        clk, rst_l,
 	 .HS(VGA_HS), .VS(VGA_VS), .blank_N(VGA_BLANK_N),
 	 .row(vga_row), .col(vga_col));
    
-   playfieldRAM pfram(.clk(clk), .rst_l(rst_l), .we_l(pfram_l),
+   playfieldRAM pfram(.clk(clk), .rst_l(rst_l), .we_l(we_l), .cs_l(cs_l),
                       .addrA(addr[9:0]), .addrB(staticTileAddr),
 		      .datain(data_in),
 		      .dataA(data_out), .dataB(staticSpriteID));
@@ -46,15 +46,15 @@ module graphicsPipeline(input logic        clk, rst_l,
    
    motionObjects mobs(.clk(clk), .rst_l(rst_l), 
 		      .row(centRow), .col(centCol),
-		      .addr(addr), .data_in(data_in), .we_l(pfram_l),
+		      .addr(addr), .data_in(data_in), .we_l(~cs_l & ~we_l),
 		      .motionSel(motionSel), .motionWide(motionWide),
 		      .spriteID(motionSpriteID), 
 		      .mob_row(mob_row), .mob_col(mob_col));
 	
    always_comb begin
-      VGA_R = 8'h0F;
+      VGA_R = 8'hFF;
+      VGA_G = 8'h00;
       VGA_B = 8'h0F;
-      VGA_G = 8'h0F;
       if(~output_blank) begin
 	 case(colorCode)
 	   2'd1: begin
@@ -70,7 +70,7 @@ module graphicsPipeline(input logic        clk, rst_l,
 	   2'd3: begin
 	      VGA_R = 8'hFF;
 	      VGA_G = 8'hFF;
-	      VGA_B = 8'hFC;
+	      VGA_B = 8'hF0;
 	   end
 	   default: begin
 	      VGA_R = 8'h00;
@@ -84,7 +84,7 @@ module graphicsPipeline(input logic        clk, rst_l,
 endmodule: graphicsPipeline
 /*
 `ifdef SIM
-module test();
+module test(input logic CLOCK_50, );
    logic clk, rst_l;
    logic HS, VS;
    logic [7:0] R, G, B;
@@ -116,5 +116,4 @@ module test();
 
 endmodule: test
 `endif
-
 */

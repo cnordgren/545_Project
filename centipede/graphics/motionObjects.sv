@@ -1,4 +1,4 @@
-`define TEST
+//`define TEST
 module motionObjects(// Global inputs
 		     input logic 	clk, rst_l,
 		     // Inputs from computeTile
@@ -17,7 +17,6 @@ module motionObjects(// Global inputs
    logic [15:0][7:0] mob_horzd, mob_vertd, mob_IDd;
    
    logic [7:0] 	     mob_height;
-   logic 	     updateHorz, updateVert, updateID;
 
    logic [15:0][7:0]  width;
    logic [7:0] 	      checkRow;
@@ -77,9 +76,6 @@ module motionObjects(// Global inputs
    
    // Check if we are updating motion object data
    always_comb begin
-      updateHorz = 1'b0;
-      updateVert = 1'b0;
-      updateID = 1'b0;
       mob_IDd = mob_ID;
       mob_vertd = mob_vert;
       mob_horzd = mob_horz;
@@ -87,15 +83,12 @@ module motionObjects(// Global inputs
       if(~we_l)
 	// We're writing to the motion object picture
 	if(addr[15:4] == 12'h07C) begin
-	   updateID = 1'b1;
 	   mob_IDd[addr[3:0]] = data_in;
 	end
 	else if(addr[15:4] == 12'h07D) begin
-	   updateVert = 1'b1;
 	   mob_vertd[addr[3:0]] = data_in;
 	end
 	else if(addr[15:4] == 12'h07E) begin
-	   updateHorz = 1'b1;
 	   mob_horzd[addr[3:0]] = data_in;
 	end
    end
@@ -115,18 +108,12 @@ module motionObjects(// Global inputs
    end // always_ff@
    `else // !`ifndef TEST
    // Test screen with full centipede, spider, laser and player
-//   assign mob_ID = {8'h85, 8'h84, 8'h83, 8'h82, 8'h81, 8'h80, 8'h87, 8'h86, 
-//		    8'h85, 8'h84, 8'h83, 8'h82, 8'h1C, 8'h19, 8'h11, 8'h10};
    assign mob_ID = {8'h10, 8'h11, 8'h19, 8'h1C, 8'h82, 8'h83, 8'h84, 8'h85,
 		    8'h86, 8'h87, 8'h80, 8'h81, 8'h82, 8'h83, 8'h84, 8'h85};
    
-//   assign mob_vert = {8'h59, 8'h61, 8'h69, 8'h71, 8'h79, 8'h81, 8'h89, 8'h91,
-//		      8'h99, 8'hA1, 8'hA9, 8'hB1, 8'hA4, 8'hC1, 8'h36, 8'h36};
    assign mob_vert = {8'hF0, 8'h36, 8'h30, 8'hA4, 8'hB1, 8'hA9, 8'hA1, 8'h99,
 		      8'h91, 8'h89, 8'h81, 8'h79, 8'h71, 8'h69, 8'h61, 8'h59};
    
-//   assign mob_horz = {8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98,
-//		      8'h98, 8'h98, 8'h98, 8'h98, 8'hF8, 8'h23, 8'hAA, 7'h28};
    assign mob_horz = {8'h00, 8'hAA, 8'h23, 8'hC8, 8'h98, 8'h98, 8'h98, 8'h98,
 		      8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98, 8'h98};
    

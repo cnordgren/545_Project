@@ -1,25 +1,19 @@
 `define TEST
-module playfieldRAM(input logic        clk, rst_l, we_l,
+module playfieldRAM(input logic        clk, rst_l, we_l, cs_l,
 		    input logic [9:0]  addrA, 
 		    input logic [9:0]  addrB,
 		    input logic [7:0]  datain, 
 		    output logic [7:0] dataA, dataB);
    
    logic [7:0] data[1024];
-   logic [1:0] addrTop;
    
-   encoder csEnc(.A(cs), .Y(addrTop));
 `ifndef TEST
-   always_ff@(posedge clk, negedge rst_l) begin
-`ifdef SIM
-      if(~rst_l)
-	data <= 0;
-      else if(~we)
+   always_ff@(posedge clk) begin
+      if(~we_l && ~cs_l)
 	data[addrA] <= datain;
-`else
-      if(~we)
-	data[addrA] <= datain;
-`endif
+      else
+	data <= data;
+      
    end
 `else // !`ifndef TEST
    initial begin

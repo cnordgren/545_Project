@@ -1,27 +1,28 @@
-module centipede(input logic clk,
-		 input logic [15:0] sw,
-		 input logic btnU, btnR, btnL,
-		 input logic [7:0] JA,
-		output logic ampPWM,
-		output logic [3:0] vgaRed, vgaBlue, vgaGreen,
-		output logic Hsync, Vsync);
+`define SIM
+module centipede(input logic CLOCK_50,
+		 input logic [15:0] SW,
+		 input logic [3:0]  KEY,
+		 // GPIO LOGIC
+		 //output logic 	    ampPWM,  AUDIO goes here
+		 output logic [7:0] VGA_R, VGA_G, VGA_B,
+		 output logic 	    VGA_HS, VGA_VS, VGA_CLK, VGA_BLANK_N, VGA_SYNC_N);
    //SIGNALS
    //INTERNAL SIGNALS
    logic [15:0] addr;							//Address
    tri [7:0] 	data;							//Master data bus
-   logic 	cpu_we_l;						//CPU Write Line
+   logic 	cpu_we_l, cpu_we;					//CPU Write Line
    logic [7:0]	cpuDout, ramDout, romDout, graphicsDout, pokeyDout;	//Data Outputs
-   logic boardclk;							//Board clock
-   logic clk_1_5;							//1.5 MHz clock
-   logic clk_50;							//50 MHz clock
-   logic clk_100;							//100 MHz clock
-   logic PFRAMRD;                                                       //Playfield read to RAM
+   logic clk_1_5;							//1.5 MHz clock	        
+   logic pfram_l;                                                       //Playfield read to RAM
    logic STEERCLR;                                                      //Refreshes trackball counters each time they're checked
-   logic SWRD;                                                          //Gets all option inputs
-   logic IN0; 								//READS buttons
+   logic swrd_l;                                                        //Gets all option inputs
+   logic IN0_l, IN1_l; 							//READS buttons
    logic POKEY; 							//POKEY enable
    logic ROM;								//Read from the ROM
    logic RAM0;								//RAM enable
+   logic irq_res;
+   logic irq;
+   logic tb_flip;                                                       //Controls which trackball the cpu is reading
    //INPUT SIGNALS
    logic [15:0] optSwitches;						//Options switches
    logic startGame, shoot;						//Buttons
@@ -29,84 +30,79 @@ module centipede(input logic clk,
    logic resetSystem;							//Reset
    //OUTPUT SIGNALS
    logic audioSignal;							//Output for sound
-   logic [7:0] red, blue, green;					//VGA Colors
-   logic vgaHsync, vgaVsync;						//VGA Sync Signals
-   logic alteraVGAblank, alteraVGAclk, alterVGAsync;			//Altera VGA Signals
 
    //ASSIGN I/O SIGNALS TO BOARD PORTS
-   assign boardclk = clk;
-   assign optSwitches = sw;
-   assign startGame = btnU;
-   assign shoot = btnR;
-   assign hordir1 = JA[0];
-   assign horclk1 = JA[1];
-   assign verdir1 = JA[2];
-   assign verclk1 = JA[3];
-   assign resetSystem = btnL;
-   assign ampPWM = audioSignal;
-   assign vgaRed = red[3:0];
-   assign vgaBlue = blue[3:0];
-   assign vgaGreen = green[3:0];
-   assign Hsync = vgaHsync;
-   assign Vsync = vgaVsync;
-
+   assign optSwitches = SW[15:0];
+   assign startGame = ~KEY[3];
+   assign shoot = ~KEY[2];
+   //assign hordir1 = JA[0];
+   //assign horclk1 = JA[1];
+   //assign verdir1 = JA[2];
+   //assign verclk1 = JA[3];
+   assign resetSystem = KEY[0];
+   //assign ampPWM = audioSignal;
+   assign irq = ~KEY[1];
+   
    // Creating clocks
-   assign clk_100 = boardclk;
-   always_ff @(posedge clk_100) begin
-	clk_50 <= ~clk_50;
-   end
    logic [5:0] count;
-   always_ff @(posedge clk_100) begin
-	if(count != 6'd33)
-		count <= count + 1;
-	else begin
-		count <= 6'd0;
-		clk_1_5 <= ~clk_1_5;
-	end
+   always_ff @(posedge CLOCK_50, negedge resetSystem) begin
+      if(startGame) begin
+	 count = 6'd0;
+	 clk_1_5 = 1'b0;
+      end
+      else if(count != 6'd17)
+	count <= count + 6'd1;
+      else begin
+	 count <= 6'd0;
+	 clk_1_5 <= ~clk_1_5;
+      end
    end
 
+   assign cpu_we_l = ~cpu_we;
+   
    //6502 CPU
-   cpu sixty502(.clk(clk_1_5), .reset(~resetSystem), .AB(addr), .DI(data), .DO(cpuDout), .WE(cpu_we_l), .IRQ(1'b0), 
-		.NMI(1'b1), .RDY(1'b1));
-   assign data = (~POKEY) ? cpuDout : 8'bzzzz_zzzz;
+   cpu sixty502(.clk(clk_1_5), .reset(~resetSystem), .AB(addr), .DI(data), 
+		.DO(cpuDout), .WE(cpu_we), .IRQ(irq), 
+		.NMI(1'b0), .RDY(1'b1));
+   assign data = (~cpu_we_l) ? cpuDout : 8'dz;
 
    //RAM
-   ram centipedeRAM(.addr(addr[9:0]), .write_l(cpu_we_l), .en_l(RAM0), .clk(clk_50), .dataBus(data));
-
+   ram centipedeRAM(.addr(addr[9:0]), .write_l(cpu_we_l), .en_l(RAM0),
+		    .clk(clk_1_5), .dataOut(ramDout), .dataIn(data));
+   assign data = (~RAM0 & cpu_we_l) ? ramDout : 8'dz;
+   
    //ROM
-   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .data(data));
+   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .data(romDout), .clk(clk_1_5));
+   assign data = (~ROM & cpu_we_l) ? romDout : 8'dz;
    
    //GRAPHICS
-   graphicsPipeline gp(.clk(clk_50), .addr(addr), .data_in(data), .data_out(graphicsDout), .rst_l(~resetSystem),
-		       .VGA_R(red), .VGA_B(blue), .VGA_G(green), .VGA_HS(vgaHsync), .VGA_VS(vgaVsync), 
-		       .VGA_BLANK_N(alteraVGAblank), .VGA_CLK(alteraVGAclk), .VGA_SYNC_N(alteraVGAsync));
-   assign data = (PFRAMRD) ? graphicsDout : 8'bzzzz_zzzz;		       
+   graphicsPipeline gp(.clk(CLOCK_50), .rst_l(resetSystem), .we_l(cpu_we_l), .cs_l(pfram_l),
+		       .addr(addr), .data_in(data), .data_out(graphicsDout),
+		       .VGA_R(VGA_R), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_VS(VGA_VS), 
+		       .VGA_BLANK_N(VGA_BLANK_N), .VGA_CLK(VGA_CLK), .VGA_SYNC_N(VGA_SYNC_N));
+   assign data = (~pfram_l & cpu_we_l) ? graphicsDout : 8'dz;		       
 		     
    //ADDRESS DECODER
-   logic WRITE_2;
-   logic WATCHDOG, OUT0, IRQRES;
-   logic PF, COLORRAM, NinetyNine, EA_READ;
-   logic EA_CONTROL, EA_ABOR;
-   logic [3:0] rom, PFWR;
-   address_decoder  ad(.AB(addr), .WRITE(cpu_we_l), .BR_W(~cpu_we_l), .GMHZ(1'b0), .PAC(1'b0),
-			.ROM(ROM), .WRITE_2(WRITE_2), .rom(rom), .STEERCLR(STEERCLR), 
-                          .WATCHDOG(WATCHDOG), .OUT0(OUT0), .IRQRES(IRQRES), .POKEY(POKEY), .SWRD(SWRD), .PF(PF), .RAM0(RAM0), .COLORRAM(COLORRAM), .NinetyNine
-(NinetyNine), .EA_READ(EA_READ), .EA_CONTROL(EA_CONTROL), .EA_ABOR(EA_ABOR), .IN0(IN0), .IN1(IN1), .PFRAMRD(PFRAMRD), .PFWR(PFWR));
-
+   address_decoder  ad(.addr(addr), .we_l(cpu_we_l),
+		       .swrd_l(swrd_l), .steerclr_l(STEERCLR), .in0_l(IN0_l), 
+		       .in1_l(IN1_l), .tb_flip(tb_flip),
+		       .pfram_l(pfram_l), .pokey_l(POKEY), .rom_l(ROM), 
+		       .ram_l(RAM0), .irq_l(irq_res));
+		       
    //AUDIO
-   POKEY pokey(.Din(data), .Dout(pokeyDout), .A(addr[3:0]), .P(8'hF), .phi2(clk_1_5),
-	       .readHighWriteLow(cpu_we_l), .cs0Bar(POKEY), .aud(audioSignal), .clk(clk_100));
-   assign data = (cpu_we_l) ? pokeyDout : 8'bzzzz_zzzz;
+   //POKEY pokey(.Din(data), .Dout(pokeyDout), .A(addr[3:0]), .P(8'hF), .phi2(clk_1_5),
+   //.readHighWriteLow(cpu_we_l), .cs0Bar(POKEY), .aud(audioSignal), .clk(CLOCK_50));
+   //assign data = (~POKEY) ? pokeyDout : 8'dz;
    
    //INPUT
-   input_network in(.ops1(optSwitches[7:0]), .ops2(optSwitches[15:8]),				// OPTION SWITCH BANKS
+/*   input_network in(.ops1(optSwitches[7:0]), .ops2(optSwitches[15:8]),				// OPTION SWITCH BANKS
    		    .readops_l(SWRD),								// READS OPTIONS TO DATA BUS
 		    .vblank(alteraVGAblank),							// VBLANK?
 		    .start1(startGame), .fire1(shoot),						// PLAYER 1 BUTTONS
 		    .readbut_l(IN0),								// READS BUTTONS TO DATA BUS
 		    .seltri(addr[0]),								// CONTROLS MUXES IN INPUT CIRCUITRY
 		    .hordir1(hordir1), .horclk1(horclk1), .verdir1(verdir1), .verclk1(verclk1),	// PLAYER 1 TRACKBALL
-		    .trackrst_l(1'b1), .steerclr(STEERCLR), .ballselect(1'b0),			// CONTROL SIGNALS FOR TRACKBALL READER
+		    .trackrst_l(1'b1), .steerclr(STEERCLR), .ballselect(flip),			// CONTROL SIGNALS FOR TRACKBALL READER
 		    .data_out(data),								// DATA OUT
 		    .joy1(4'd0), .joy2(4'd0),							// JOYSTICKS, HELD LOW
 		    .readjoy_l(1'b1),								// READS JOYSTICKS TO DATA BUS, HELD HIGH
@@ -114,5 +110,43 @@ module centipede(input logic clk,
 		    .start2(1'b0), .fire2(1'b0),						// PLAYER 2 BUTTONS, HELD LOW
 		    .hordir2(1'b0), .horclk2(1'b0), .verdir2(1'b0), .verclk2(1'b0));		// PLAYER 2 TRACKBALL, HELD LOW
    
-
+*/
 endmodule: centipede
+
+`ifdef SIM
+module test();
+   logic clk, rst_l, VGA_VS, VGA_HS, irq;
+   logic [7:0] VGA_R, VGA_B, VGA_G;
+   logic       clk_rst;
+   
+   
+   centipede cent(.CLOCK_50(clk), .KEY({clk_rst, 1'b1, irq, rst_l}), 
+		  .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B),
+		  .VGA_HS(VGA_HS), .VGA_VS(VGA_VS));
+
+   initial begin
+      clk = 0;
+      forever #5 clk = ~clk;
+   end
+
+   initial begin
+      irq = 1'b0;
+      rst_l = 1'b0;
+      clk_rst = 1'b0;
+      @(posedge clk);
+      @(posedge clk);
+      clk_rst = 1'b1;
+      repeat(100) begin
+	 @(posedge clk);
+	 @(posedge clk);
+      end
+       rst_l = 1'b1;
+
+      repeat(1000000) begin
+	 @(posedge clk);
+      end
+      $finish;
+   end
+      
+endmodule: test
+`endif

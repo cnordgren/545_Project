@@ -61,7 +61,7 @@ module register
      output logic [WIDTH-1:0] Q);
 
      always_ff @(posedge clk, negedge rst_l) begin
-         if (~rst_l | reset)
+         if (~rst_l)
              Q <= RESET_VAL;
          else if (en)
              Q <= D;

@@ -53,8 +53,8 @@ module graphicsPipeline(input logic        clk, rst_l,
 	
    always_comb begin
       VGA_R = 8'hFF;
-      VGA_G = 8'h00;
-      VGA_B = 8'h0F;
+      VGA_G = 8'hFF;
+      VGA_B = 8'hFF;
       if(~output_blank) begin
 	 case(colorCode)
 	   2'd1: begin

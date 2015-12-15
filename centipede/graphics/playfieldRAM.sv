@@ -1,4 +1,4 @@
-`define TEST
+//`define TEST
 module playfieldRAM(input logic        clk, rst_l, we_l, cs_l,
 		    input logic [9:0]  addrA, 
 		    input logic [9:0]  addrB,
@@ -9,7 +9,9 @@ module playfieldRAM(input logic        clk, rst_l, we_l, cs_l,
    
 `ifndef TEST
    always_ff@(posedge clk) begin
-      if(~we_l && ~cs_l)
+      if(~rst_l)
+	data <= '{default:8'd0};
+      else if(~we_l && ~cs_l)
 	data[addrA] <= datain;
       else
 	data <= data;

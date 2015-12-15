@@ -1,4 +1,4 @@
-`define SIM
+//`define SIM1
 module centipede(input logic CLOCK_50,
 		 input logic [15:0] SW,
 		 input logic [3:0]  KEY,
@@ -11,7 +11,7 @@ module centipede(input logic CLOCK_50,
    logic [15:0] addr;							//Address
    tri [7:0] 	data;							//Master data bus
    logic 	cpu_we_l, cpu_we;					//CPU Write Line
-   logic [7:0]	cpuDout, ramDout, romDout, graphicsDout, pokeyDout;	//Data Outputs
+   logic [7:0]	cpuDout, ramDout, romDout, graphicsDout, graphicsDoutSync, pokeyDout, cpuDataInSync;	//Data Outputs
    logic clk_1_5;							//1.5 MHz clock	        
    logic pfram_l;                                                       //Playfield read to RAM
    logic STEERCLR;                                                      //Refreshes trackball counters each time they're checked
@@ -41,11 +41,23 @@ module centipede(input logic CLOCK_50,
    //assign verclk1 = JA[3];
    assign resetSystem = KEY[0];
    //assign ampPWM = audioSignal;
-   assign irq = ~KEY[1];
-   
+
+   logic [$clog2(104167)-1:0] irqcount;
+   assign irq = irqcount == 104166;
+
+   // Generate IRQ
+   always_ff@(posedge CLOCK_50, negedge resetSystem) begin
+      if(~resetSystem)
+	irqcount <= 0;
+      else if(~irq_res)
+	 irqcount <= 0;
+      else if(irqcount != 104166)
+	irqcount <= irqcount + 1;
+   end
+	
    // Creating clocks
    logic [5:0] count;
-   always_ff @(posedge CLOCK_50, negedge resetSystem) begin
+   always_ff @(posedge CLOCK_50) begin
       if(startGame) begin
 	 count = 6'd0;
 	 clk_1_5 = 1'b0;
@@ -61,18 +73,20 @@ module centipede(input logic CLOCK_50,
    assign cpu_we_l = ~cpu_we;
    
    //6502 CPU
-   cpu sixty502(.clk(clk_1_5), .reset(~resetSystem), .AB(addr), .DI(data), 
+   cpu sixty502(.clk(clk_1_5), .reset(~resetSystem), .AB(addr), .DI(cpuDataInSync), 
 		.DO(cpuDout), .WE(cpu_we), .IRQ(irq), 
 		.NMI(1'b0), .RDY(1'b1));
+   register #(8) dinsync(.D(data), .Q(cpuDataInSync), .clk(CLOCK_50), .reset(1'b0),
+			 .rst_l(resetSystem), .en(1'b1));
    assign data = (~cpu_we_l) ? cpuDout : 8'dz;
 
    //RAM
-   ram centipedeRAM(.addr(addr[9:0]), .write_l(cpu_we_l), .en_l(RAM0),
+   ram centipedeRAM(.addr(addr[9:0]), .write_l(cpu_we_l), .en_l(RAM0), .rst_l(resetSystem),
 		    .clk(clk_1_5), .dataOut(ramDout), .dataIn(data));
    assign data = (~RAM0 & cpu_we_l) ? ramDout : 8'dz;
    
    //ROM
-   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .data(romDout), .clk(clk_1_5));
+   rom centipedeROM(.address(addr[13:0]), .ena_l(ROM), .data(romDout), .clk(clk_1_5), .rst_l(resetSystem));
    assign data = (~ROM & cpu_we_l) ? romDout : 8'dz;
    
    //GRAPHICS
@@ -80,7 +94,11 @@ module centipede(input logic CLOCK_50,
 		       .addr(addr), .data_in(data), .data_out(graphicsDout),
 		       .VGA_R(VGA_R), .VGA_B(VGA_B), .VGA_G(VGA_G), .VGA_HS(VGA_HS), .VGA_VS(VGA_VS), 
 		       .VGA_BLANK_N(VGA_BLANK_N), .VGA_CLK(VGA_CLK), .VGA_SYNC_N(VGA_SYNC_N));
-   assign data = (~pfram_l & cpu_we_l) ? graphicsDout : 8'dz;		       
+   
+   register #(8) gdreg(.D(graphicsDout), .Q(graphicsDoutSync), .clk(clk_1_5), .reset(1'b0),
+		       .rst_l(resetSystem), .en(1'b1));
+   
+   assign data = (~pfram_l & cpu_we_l) ? graphicsDoutSync : 8'dz;		       
 		     
    //ADDRESS DECODER
    address_decoder  ad(.addr(addr), .we_l(cpu_we_l),
@@ -91,29 +109,29 @@ module centipede(input logic CLOCK_50,
 		       
    //AUDIO
    //POKEY pokey(.Din(data), .Dout(pokeyDout), .A(addr[3:0]), .P(8'hF), .phi2(clk_1_5),
-   //.readHighWriteLow(cpu_we_l), .cs0Bar(POKEY), .aud(audioSignal), .clk(CLOCK_50));
-   //assign data = (~POKEY) ? pokeyDout : 8'dz;
+//	       .readHighWriteLow(cpu_we_l), .cs0Bar(POKEY), .aud(audioSignal), .clk(CLOCK_50));
+  // assign data = (~POKEY & cpu_we_l) ? pokeyDout : 8'dz;
    
    //INPUT
 /*   input_network in(.ops1(optSwitches[7:0]), .ops2(optSwitches[15:8]),				// OPTION SWITCH BANKS
-   		    .readops_l(SWRD),								// READS OPTIONS TO DATA BUS
-		    .vblank(alteraVGAblank),							// VBLANK?
+   		    .readops_l(swrd_l),								// READS OPTIONS TO DATA BUS
+		    .vblank(~VGA_BLANK_N),							// VBLANK?
 		    .start1(startGame), .fire1(shoot),						// PLAYER 1 BUTTONS
-		    .readbut_l(IN0),								// READS BUTTONS TO DATA BUS
+		    .readbut_l(IN0_l),								// READS BUTTONS TO DATA BUS
 		    .seltri(addr[0]),								// CONTROLS MUXES IN INPUT CIRCUITRY
 		    .hordir1(hordir1), .horclk1(horclk1), .verdir1(verdir1), .verclk1(verclk1),	// PLAYER 1 TRACKBALL
-		    .trackrst_l(1'b1), .steerclr(STEERCLR), .ballselect(flip),			// CONTROL SIGNALS FOR TRACKBALL READER
+		    .trackrst_l(1'b1), .steerclr(STEERCLR), .ballselect(tb_flip),			// CONTROL SIGNALS FOR TRACKBALL READER
 		    .data_out(data),								// DATA OUT
 		    .joy1(4'd0), .joy2(4'd0),							// JOYSTICKS, HELD LOW
 		    .readjoy_l(1'b1),								// READS JOYSTICKS TO DATA BUS, HELD HIGH
 		    .coinR(1'b0), .coinL(1'b0), .coinC(1'b0),					// COIN INPUTS, HELD LOW
 		    .start2(1'b0), .fire2(1'b0),						// PLAYER 2 BUTTONS, HELD LOW
 		    .hordir2(1'b0), .horclk2(1'b0), .verdir2(1'b0), .verclk2(1'b0));		// PLAYER 2 TRACKBALL, HELD LOW
-   
-*/
+  */ 
+
 endmodule: centipede
 
-`ifdef SIM
+`ifdef SIM1
 module test();
    logic clk, rst_l, VGA_VS, VGA_HS, irq;
    logic [7:0] VGA_R, VGA_B, VGA_G;

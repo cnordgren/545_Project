@@ -96,9 +96,9 @@ module motionObjects(// Global inputs
    // Update the state registers holding motion object data
    always_ff@(posedge clk, negedge rst_l) begin
       if(~rst_l) begin
-	 mob_horz <= 0;
-	 mob_vert <= 0;
-	 mob_ID <= 0;
+	 mob_horz <= '{default:8'd0};
+	 mob_vert <= '{default:8'd0};
+	 mob_ID <= '{default:8'd0};
       end
       else begin
 	 mob_horz <= mob_horzd;
